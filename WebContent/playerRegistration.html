@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Andhra Cricket Association</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  
+<div class="container">
+<form action="register" method="post" enctype="multipart/form-data">
+   <div class="imgcontainer">
+    <img src="logo2.jpg"alt="logo" class="avatar">
+  </div>
+    <div class="row">
+      <h4>Player ID</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" name="p_id" placeholder="Player ID" required/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="row">
+      <h4>Full Name</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" name="p_name" placeholder="Full Name" required/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Date of Birth</h4>
+        <div class="input-group">
+          <div class="col-third">
+            <input type="number" placeholder="DD" name="DOB_DD" required/ >
+          </div>
+          <div class="col-third">
+            <input type="number" placeholder="MM" name="DOB_MM" required/>
+          </div>
+          <div class="col-third">
+            <input type="number" placeholder="YYYY" name="DOB_YY" required/>
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Gender</h4>
+        <div class="input-group">
+          <input type="radio" name="gender" value="male" id="gender-male" />
+          <label for="gender-male">Male</label>
+          <input type="radio" name="gender" value="female" id="gender-female" required/>
+          <label for="gender-female">Female</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="input-group input-group-icon">
+        <input type="number" placeholder="Phone Number" id="phonenumber" required />
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="email" placeholder="Email"  name="email" required />
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Address" name="address1" required />
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Address 2" name="address2" />
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+     
+      <div class="input-group input-group-icon">
+        <input type="Number" placeholder="Zipcode" name="zip" required/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+        <div class="input-group">
+        <div class="col-half1">
+            <h4>District</h4>
+        <div class="col-third1">
+    
+    <select name="district" required >
+    <option value="" disabled selected>Select your option</option>
+             <option value="Anantapur	"> Anantapur </option>
+            <option value="Chittoor	"> Chittoor </option>
+            <option value="East Godavari"> East Godavari </option>
+            <option value="Guntur	"> Guntur </option>
+            <option value="Kadapa	"> Kadapa </option>
+            <option value="Krishna	"> Krishna </option>
+            <option value="Kurnool	"> Kurnool </option>
+            <option value="Nellore	"> Nellore </option>
+            <option value="Prakasam	"> Prakasam </option>
+            <option value="Srikakulam	"> Srikakulam </option>
+            <option value="Visakhapatnam	"> Visakhapatnam </option>
+            <option value="Vizianagaram	"> Vizianagaram </option>
+            <option value="West Godavari	"> West Godavari </option>
+                     </select name="profeciency" required><br>
+                     </div>
+                     </div>
+                     
+                        <h4>Proficiency</h4>
+                 <div class="input-group">
+                   <div class="col-half1">      
+        <div class="col-third1">
+         <select  required>
+    <option value="" disabled selected>Select your option</option>
+             <option value="Batsman	"> Batsman </option>
+            <option value="Bowler	"> Bowler </option>
+            <option value="Allrounder	"> Allrounder </option>
+            <option value="Wkt Batsman	"> Wicket_keeper </option>
+           
+                     </select><br>
+                     </div>
+                          </div>
+                          <br>
+                           
+                 <div class="input-group">
+                   <div class="col-half1"> 
+                   <h4>Blood Group</h4>     
+        <div class="col-third1">
+        <select  name=" bloodgroup" required >
+    <option value="" disabled selected>Select your option</option>
+             <option value="A+	"> A  positive (A+)</option>
+            <option value="A-	"> A negative (A-) </option>
+            <option value="B+	"> B  positive (B+) </option>
+            <option value="B-	"> B negative (B-)</option>
+           <option value="O+	"> O positive (O+) </option>
+            <option value="O-	"> O  negative (O-) </option>
+            <option value="AB+	"> AB  positive (AB+) </option>
+            <option value="AB-	"> AB  negative (AB-) </option>
+           
+                     </select><br>
+                     </div>
+               </div>                
+           <div class="input-group">
+                   <div class="col-half1"> 
+                   <h4>Image</h4>     
+        <input type="file" accept="image/*" name="image" onchange="loadFile(event)" required>
+<img id="output" style="width:250px"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+                     </div>
+               </div> 
+               <div class="input-group input-group-icon">
+             
+               <h4>	Brief History of Old Injuries</h4>
+               <textarea  rows="4" cols="50"  name="injuries">
+                     
+    </textarea>
+  <br>
+    <br>  
+                   
+	<button class="button" type="submit"><span>submit</span></button>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	           
+      <button class="button" type="reset"><span>Reset </span></button>
+         
+  </form>
+</div>
+
+
+</body>
+</html>
